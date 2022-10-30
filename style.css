@@ -1,0 +1,194 @@
+:root {
+  --primary__pale-blue: hsl(225, 100%, 94%, 0.4);
+  --primary__bright-blue: hsl(245, 75%, 52%);
+  --primary__active-blue: rgba(70, 54, 247, 0.65);
+  --neutral__vPale-blue: hsl(225, 100%, 98%);
+  --neutral__desaturated-blue: hsl(224, 23%, 55%);
+  --neutral__dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--neutral__desaturated-blue);
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 450px;
+  background-color: var(--neutral__vPale-blue);
+  border-radius: 20px;
+  box-shadow: 0 15px 20px 10px rgba(0, 0, 0, 0.05),
+    0 35px 25px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.image {
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.description {
+  padding: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--neutral__dark-blue);
+  margin-bottom: 20px;
+}
+
+.card-text {
+  color: var(--neutral__desaturated-blue);
+  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.annual {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary__pale-blue);
+  border-radius: 12px;
+  padding: 15px 30px;
+  gap: 60px;
+}
+
+.plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.annual__plan {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--neutral__dark-blue);
+  margin-bottom: 5px;
+}
+
+.price {
+  color: var(--neutral__desaturated-blue);
+}
+
+a {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+a:hover,
+a:active {
+  cursor: pointer;
+  color: var(--primary__active-blue);
+  text-decoration: none;
+}
+
+.submit {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: none;
+  background-color: var(--primary__bright-blue);
+  padding: 20px;
+  width: 100%;
+  border-radius: 12px;
+  color: var(--neutral__vPale-blue);
+  font-weight: 700;
+  font-size: 17px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.submit:hover,
+.submit:active {
+  background-color: var(--primary__active-blue);
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.cancel {
+  color: var(--neutral__desaturated-blue);
+  font-weight: 700;
+  font-size: 17px;
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+.cancel:hover,
+.cancel:active {
+  cursor: pointer;
+  color: var(--neutral__dark-blue);
+}
+
+@media only screen and (max-width: 425px) {
+  .container {
+    max-width: 87%;
+  }
+
+  .description {
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    margin-top: -10px;
+  }
+
+  .card-text {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .annual {
+    gap: 30px;
+    padding: 10px 20px;
+  }
+
+  .annual__plan {
+    font-size: 13px;
+    font-weight: 900;
+  }
+
+  /* .price {
+    font-size: 12px;
+  } */
+
+  a {
+    font-size: 13px;
+    font-weight: 900;
+  }
+
+  .submit {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 110%;
+  }
+
+  .cancel {
+    font-size: 15px;
+    margin-bottom: -5px;
+  }
+}
